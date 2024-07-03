@@ -1,0 +1,58 @@
+.skills {
+    &__content-wrapper {
+      display:flex; 
+      padding: 20px;
+      gap: 30px;
+    }
+  
+    &__content-wrapper__inner-content {
+    width: 80%; // Adjusted to take full width
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; // Added margin between sections
+
+    &__category-text {
+        color: var(--yellow-theme-main-color);
+        font-size: 22px;
+        display: inline-block;
+        font-weight: 700;
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 10px;  // Added margin below category text
+        border-bottom: 3px solid var(--yellow-theme-main-color);
+        padding: 10px 10px;
+    }
+
+    &__category-text::before , &__category-text::after{
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 5px;
+        background-color: var(--yellow-theme-main-color);
+        bottom: -1px;
+    }
+    &__category-text::before{
+        left: 0;
+    }
+    &__category-text::after{
+        right: 0;
+    }
+
+    }
+
+    div{
+        width: 100%;
+        
+    }
+  
+  }
+  
+
+  @media only screen and (max-width : 768px){
+    .skills{
+        &__content-wrapper{
+            flex-direction: column;
+        }
+    }
+
+  }
