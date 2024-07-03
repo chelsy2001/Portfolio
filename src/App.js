@@ -2,13 +2,13 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './containers/home';
 import About from './containers/about';
 import Resume from './containers/resume';
-import Skills from './containers/skills';
 import Project from './containers/projects';
 import Contact from './containers/contact';
 import NavBar from './components/navBar';
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import { useCallback } from "react";
+import Skill from './containers/skills';
 
 function App() {
 
@@ -109,7 +109,7 @@ const renderParticleJsInHomePage = location.pathname ==="/";
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/skills" element={<Skills />} />
+        <Route path="/skill" element={<Skill />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
