@@ -1,0 +1,82 @@
+.resume {
+    height: 100%;
+}
+
+.timeline {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between; /* Ensure equal spacing */
+
+    &__experience,
+    &__education {
+        width: 45%; /* Adjusted width to ensure spacing */
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__header-text {
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--yellow-theme-main-color);
+
+            &::before,
+            &::after {
+                position: absolute;
+                width: 2px;
+                content: '';
+                height: 5px;
+                background-color: var(--yellow-theme-main-color);
+                bottom: -1px;
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+        .vertical-timeline-element-title-wrapper{
+            box-shadow: none;
+            h3,h4{
+                font-size: 18px;
+                color: var(--yellow-theme-main-color);
+            }
+            h4{
+                margin-left: 8px;
+                margin-bottom: 4px;
+            }
+
+            h6{
+                font-size: 15px;
+                font-weight: 300;
+                font-family:'Times New Roman', Times, serif;
+                margin-bottom: 8px;
+                padding-top: 8px;
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 786px){
+    .timeline{
+        flex-direction: column;
+        
+        &__experience,
+    &__education{
+        width: 100%;
+        gap:2rem;
+    }
+    }
+}
