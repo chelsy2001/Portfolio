@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.scss'
 import { useNavigate } from 'react-router-dom'
 import {Animate} from 'react-simple-animate'
+import Footer from '../../components/footer'
 
 const Home = () => {
 
@@ -32,6 +33,9 @@ const Home = () => {
       }}>
       <div className='home__contact-me'>
         <button onClick={handleNavigationToContactMePage}>Hire Me</button>
+        <a href="/Chelsy_React_Native_Resume (2).pdf" download>
+            <button>Download Resume</button>
+          </a>
       </div>
       </Animate>
     </section>

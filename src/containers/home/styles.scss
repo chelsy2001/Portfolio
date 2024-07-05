@@ -45,6 +45,9 @@ html, body {
       border: 1.5px solid var(--yellow-theme-main-color);
       border-radius: 4px;
       font-weight: 500;
+      margin-left: 20px;
+      align-items: center;
+      justify-content: space-between;
 
       &:hover{
         background: var(--yellow-theme-main-color);
