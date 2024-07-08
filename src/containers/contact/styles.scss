@@ -1,8 +1,8 @@
-.contact{
-    &__content{
+.contact {
+    &__content {
         padding: 20px;
 
-        &__header-text{
+        &__header-text {
             color: var(--yellow-theme-sub-text-color);
             display: inline-block;
             font-size: 22px;
@@ -15,7 +15,7 @@
             border-bottom: 2px solid var(--yellow-theme-sub-text-color);
         }
 
-        &__header-text::before,&__header-text::after{
+        &__header-text::before, &__header-text::after {
             position: relative;
             content: "";
             width: 2px;
@@ -23,25 +23,26 @@
             background-color: var(--yellow-theme-sub-text-color);
             bottom: -1px;
         }
-        &__header-text::before{
+        &__header-text::before {
             left: 0;
         }
-        &__header-text::after{
+        &__header-text::after {
             right: 0;
         }
 
-        &__form{
+        &__form {
             margin-top: 30px;
 
-            &__controlswrapper{
+            &__controlswrapper {
                 display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap: 40px;
-                // margin-bottom: 30px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px; 
+                margin-bottom: 20px; 
 
-                div{
+                div {
                     position: relative;
-                    .inputName,.inputEmail,.inputdescription{
+
+                    .inputName, .inputEmail, .inputdescription {
                         width: 100%;
                         border: 2px solid var(--yellow-theme-main-color);
                         padding: 16px 12px;
@@ -50,7 +51,7 @@
                         color: var(--yellow-theme-sub-text-color);
                     }
 
-                    .nameLabel,.emailLabel,.descriptionLabel{
+                    .nameLabel, .emailLabel, .descriptionLabel {
                         font-weight: 500;
                         position: relative;
                         top: 7px;
@@ -60,7 +61,7 @@
                         font-size: 16px;
                     }
 
-                    .inputName:focus,.inputEmail:focus,.inputdescription:focus{
+                    .inputName:focus, .inputEmail:focus, .inputdescription:focus {
                         outline: none;
                     }
 
@@ -69,40 +70,48 @@
                     .inputEmail:focus + .emailLabel,
                     .inputEmail:valid + .emailLabel,
                     .inputdescription:focus + .descriptionLabel,
-                    .inputdescription:valid + .descriptionLabel{
+                    .inputdescription:valid + .descriptionLabel {
                         font-size: 18px;
-                        top: 5px;
+                        top: -10px; 
                         left: 16px;
                     }
                 }
             }
-        }
 
-        button{
-            cursor: pointer;
-            padding: 10px 70px;
-            margin-top: 20px;
-            font-size: 2rem;
-            background: transparent;
-            color: var(--yellow-theme-main-color);
-            border: 1.5px solid var(--yellow-theme-main-color);
-            border-radius: 4px;
-            font-weight: 600;
+            button {
+                cursor: pointer;
+                padding: 10px 50px; 
+                margin-top: 20px;
+                font-size: 1.5rem; 
+                background: transparent;
+                color: var(--yellow-theme-main-color);
+                border: 1.5px solid var(--yellow-theme-main-color);
+                border-radius: 4px;
+                font-weight: 600;
 
-            &:hover{
-                color: #000;
-                background: var(--yellow-theme-main-color);
+                &:hover {
+                    color: #000;
+                    background: var(--yellow-theme-main-color);
+                }
             }
         }
     }
 }
 
-@media only screen and (max-width : 768px){
-    .contact__content__form{
+@media only screen and (max-width: 768px) {
+    .contact__content__form {
         text-align: center;
 
-        &__controlswrapper{
-            grid-template-columns: repeat(1,1fr);
+        &__controlswrapper {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px; 
         }
+    }
+
+    .contact__content__form__controlswrapper div .nameLabel,
+    .contact__content__form__controlswrapper div .emailLabel,
+    .contact__content__form__controlswrapper div .descriptionLabel {
+        font-size: 14px;
+        top: 5px; 
     }
 }

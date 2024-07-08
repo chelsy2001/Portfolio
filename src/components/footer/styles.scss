@@ -1,12 +1,14 @@
 .footer {
-    display:flex;
+    display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     padding: 15px;
     background-color: #181818;
+    text-align: center;
 
     a {
-        margin: 0 15px;
+        margin: 10px 15px; 
         color: var(--yellow-theme-main-color);
         text-decoration: none;
         transition: color 0.3s;
@@ -16,13 +18,27 @@
         }
     }
 
-    h6{
+    h6 {
         font-size: 16px;
-        margin: 0 8px;
+        margin: 10px 8px; 
         color: var(--yellow-theme-main-color);
     }
-    h5{
+
+    h5 {
         font-size: 16px;
+        margin: 10px 8px; 
         color: var(--yellow-theme-main-color);
+    }
+
+    @media (min-width: 769px) {
+        flex-direction: row; 
+
+        a {
+            margin: 0 15px; 
+        }
+
+        h6, h5 {
+            margin: 0 8px;
+        }
     }
 }
